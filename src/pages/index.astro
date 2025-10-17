@@ -6,44 +6,171 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero {
+				background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+				color: white;
+				padding: 4em 2em;
+				text-align: center;
+				margin: -3em -1em 3em -1em;
+				border-radius: 0 0 20px 20px;
+			}
+			.hero h1 {
+				color: white;
+				font-size: 3.5em;
+				margin-bottom: 0.3em;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+			}
+			.hero .subtitle {
+				font-size: 1.5em;
+				margin-bottom: 1em;
+				opacity: 0.95;
+			}
+			.hero .district {
+				font-size: 1.2em;
+				font-weight: 600;
+				background: rgba(255,255,255,0.2);
+				display: inline-block;
+				padding: 0.5em 1.5em;
+				border-radius: 50px;
+				margin-top: 1em;
+			}
+			.values {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2em;
+				margin: 3em 0;
+			}
+			.value-card {
+				background: white;
+				padding: 2em;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.value-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+			}
+			.value-card h3 {
+				color: #1e3a8a;
+				margin-bottom: 0.5em;
+			}
+			.priorities {
+				background: #f8fafc;
+				padding: 2em;
+				border-radius: 12px;
+				margin: 3em 0;
+			}
+			.priorities h2 {
+				color: #1e3a8a;
+				text-align: center;
+				margin-bottom: 1.5em;
+			}
+			.priorities ul {
+				list-style: none;
+				padding: 0;
+			}
+			.priorities li {
+				padding: 1em;
+				margin: 0.5em 0;
+				background: white;
+				border-left: 4px solid #3b82f6;
+				border-radius: 6px;
+				transition: all 0.3s ease;
+			}
+			.priorities li:hover {
+				padding-left: 1.5em;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.cta-section {
+				text-align: center;
+				background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+				color: white;
+				padding: 3em 2em;
+				border-radius: 12px;
+				margin: 3em 0;
+			}
+			.cta-section h2 {
+				color: white;
+				margin-bottom: 1em;
+			}
+			.cta-button {
+				display: inline-block;
+				background: white;
+				color: #1e3a8a;
+				padding: 1em 2.5em;
+				border-radius: 50px;
+				text-decoration: none;
+				font-weight: 700;
+				font-size: 1.2em;
+				transition: all 0.3s ease;
+				margin-top: 1em;
+			}
+			.cta-button:hover {
+				transform: scale(1.05);
+				box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+			}
+			@media (max-width: 720px) {
+				.hero h1 {
+					font-size: 2.5em;
+				}
+				.hero .subtitle {
+					font-size: 1.2em;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="hero">
+				<h1>Alexandre Grondin</h1>
+				<p class="subtitle">Votre voix au conseil municipal</p>
+				<div class="district">District 4 - Granby</div>
+			</div>
+
+			<section>
+				<h2>Une vision pour notre quartier</h2>
+				<p>
+					Citoyen engagé et résident du district 4, je me présente aux élections municipales avec une seule mission : représenter vos intérêts et améliorer notre qualité de vie. Ensemble, nous pouvons bâtir un quartier plus dynamique, accessible et accueillant pour tous.
+				</p>
+			</section>
+
+			<div class="values">
+				<div class="value-card">
+					<h3>Écoute et proximité</h3>
+					<p>Être à votre écoute est ma priorité. Je m'engage à être accessible et présent pour comprendre vos préoccupations et travailler à y répondre concrètement.</p>
+				</div>
+				<div class="value-card">
+					<h3>Transparence</h3>
+					<p>Vous méritez un élu transparent qui rend compte de ses actions. Je m'engage à vous tenir informés des décisions prises et des projets en cours.</p>
+				</div>
+				<div class="value-card">
+					<h3>Action locale</h3>
+					<p>Les solutions les plus efficaces sont souvent locales. Je travaillerai à identifier et résoudre les enjeux spécifiques à notre district.</p>
+				</div>
+			</div>
+
+			<div class="priorities">
+				<h2>Mes priorités pour le District 4</h2>
+				<ul>
+					<li><strong>Améliorer nos infrastructures</strong> - Routes, trottoirs et espaces publics sécuritaires et bien entretenus</li>
+					<li><strong>Soutenir les familles</strong> - Plus de parcs, d'espaces verts et d'activités pour nos jeunes</li>
+					<li><strong>Développement économique local</strong> - Encourager les commerces de proximité et créer des opportunités</li>
+					<li><strong>Environnement et mobilité durable</strong> - Promouvoir le transport actif et protéger nos espaces naturels</li>
+					<li><strong>Sécurité publique</strong> - Assurer un quartier sûr où il fait bon vivre pour tous</li>
+				</ul>
+			</div>
+
+			<section class="cta-section">
+				<h2>Faisons la différence ensemble</h2>
+				<p>Votre voix compte. Votre quartier compte. Le 3 novembre, votez pour un changement positif dans le District 4.</p>
+				<a href="/blog" class="cta-button">Découvrez mes propositions</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
