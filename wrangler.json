@@ -17,6 +17,10 @@
     {
       "pattern": "alexandregrondin.ca",
       "custom_domain": true
+    },
+    {
+      "pattern": "www.alexandregrondin.ca",
+      "custom_domain": true
     }
   ]
 }
