@@ -7,8 +7,8 @@
 :root {
   --accent: #f5bd18;
   --accent-dark: #054353;
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
+  --black: 245, 189, 24;
+  --gray: 5, 67, 83;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
