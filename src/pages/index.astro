@@ -18,6 +18,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				margin: -3em -1em 3em -1em;
 				border-radius: 0 0 20px 20px;
 			}
+			.hero-content {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 3em;
+				max-width: 1200px;
+				margin: 0 auto;
+				flex-wrap: wrap;
+			}
+			.hero-text {
+				flex: 1;
+				min-width: 300px;
+			}
+			.hero-image {
+				flex: 0 0 auto;
+			}
+			.hero-image img {
+				width: 280px;
+				height: 280px;
+				border-radius: 50%;
+				border: 6px solid rgba(255,255,255,0.3);
+				box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+				object-fit: cover;
+			}
 			.hero h1 {
 				color: white;
 				font-size: 3.5em;
@@ -115,6 +139,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 			}
 			@media (max-width: 720px) {
+				.hero-content {
+					gap: 2em;
+				}
+				.hero-image img {
+					width: 200px;
+					height: 200px;
+				}
 				.hero h1 {
 					font-size: 2.5em;
 				}
@@ -128,9 +159,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="hero">
-				<h1>Alexandre Grondin</h1>
-				<p class="subtitle">Votre voix au conseil municipal</p>
-				<div class="district">District 4 - Granby</div>
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>Alexandre Grondin</h1>
+						<p class="subtitle">Votre voix au conseil municipal</p>
+						<div class="district">District 4 - Granby</div>
+					</div>
+					<div class="hero-image">
+						<img src="/Grondin_D04.png" alt="Alexandre Grondin" />
+					</div>
+				</div>
 			</div>
 
 			<section>
