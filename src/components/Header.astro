@@ -5,12 +5,12 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h1><a href="/">{SITE_TITLE}</a></h1>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
 		
 		<button class="menu-button" aria-label="Menu">
 			<div class="hamburger-lines">
 				<span class="line line1"></span>
-				<span class="line line2"></span>
+				/* <span class="line line2"></span> */
 				<span class="line line3"></span>
 			</div>
 		</button>
@@ -18,7 +18,7 @@ import { SITE_TITLE } from '../consts';
 		<div class="menu-items">
 			<div class="internal-links">
 				<HeaderLink href="/">Accueil</HeaderLink>
-				<HeaderLink href="/blog">Propositions</HeaderLink>
+				/* <HeaderLink href="/blog">Propositions</HeaderLink> */
 				<HeaderLink href="/about">À propos</HeaderLink>
 			</div>
 			<div class="contact-links">
@@ -64,6 +64,7 @@ import { SITE_TITLE } from '../consts';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: #054353; /* Added specific color for the title */
 	}
 
 	/* Menu Button Styles */
@@ -90,7 +91,7 @@ import { SITE_TITLE } from '../consts';
 		height: 3px;
 		width: 100%;
 		border-radius: 10px;
-		background: #0D0D0D;
+		background: #054353; /* Updated hamburger lines color to match */
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -126,18 +127,18 @@ import { SITE_TITLE } from '../consts';
 		width: 100%;
 		text-align: center;
 		padding: 0.75rem;
-		color: var(--black);
+		color: #054353; /* Updated link color to match */
 		text-decoration: none;
 		border: none;
 		transition: background-color 0.3s ease;
 	}
 
 	.internal-links a:hover {
-		background-color: rgba(var(--accent), 0.1);
+		background-color: rgba(5, 67, 83, 0.1); /* Updated hover color to match */
 	}
 
 	.internal-links a.active {
-		background-color: rgba(var(--accent), 0.15);
+		background-color: rgba(5, 67, 83, 0.15); /* Updated active color to match */
 	}
 
 	.contact-links {
@@ -145,7 +146,7 @@ import { SITE_TITLE } from '../consts';
 		justify-content: center;
 		gap: 2rem;
 		padding-top: 1rem;
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-top: 1px solid rgba(5, 67, 83, 0.1); /* Updated border color to match */
 	}
 
 	.contact-links a {
@@ -156,11 +157,11 @@ import { SITE_TITLE } from '../consts';
 		height: 48px;
 		border-radius: 50%;
 		transition: background-color 0.3s ease;
-		color: var(--black);
+		color: #054353; /* Updated icon color to match */
 	}
 
 	.contact-links a:hover {
-		background-color: rgba(var(--accent), 0.1);
+		background-color: rgba(5, 67, 83, 0.1); /* Updated hover color to match */
 	}
 
 	/* Animation for hamburger to X */
