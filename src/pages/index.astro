@@ -11,16 +11,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			.hero {
-				background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+				background: linear-gradient(135deg, #054353 0%, #054353 100%);
 				color: white;
 				padding: 4em 2em;
 				text-align: center;
 				margin: -3em -1em 3em -1em;
 				border-radius: 0 0 20px 20px;
 			}
+			.hero-content {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 3em;
+				max-width: 1200px;
+				margin: 0 auto;
+				flex-wrap: wrap;
+			}
+			.hero-text {
+				flex: 1;
+				min-width: 300px;
+			}
+			.hero-image {
+				flex: 0 0 auto;
+			}
+			.hero-image img {
+				width: 280px;
+				height: 280px;
+				border-radius: 50%;
+				border: 6px solid rgba(255,255,255,0.3);
+				box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+				object-fit: cover;
+			}
 			.hero h1 {
 				color: white;
-				font-size: 3.5em;
+				font-size: 3.2em;
 				margin-bottom: 0.3em;
 				text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 			}
@@ -56,7 +80,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				box-shadow: 0 8px 12px rgba(0,0,0,0.15);
 			}
 			.value-card h3 {
-				color: #1e3a8a;
+				color: #054353;
 				margin-bottom: 0.5em;
 			}
 			.priorities {
@@ -66,7 +90,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				margin: 3em 0;
 			}
 			.priorities h2 {
-				color: #1e3a8a;
+				color: #054353;
 				text-align: center;
 				margin-bottom: 1.5em;
 			}
@@ -78,7 +102,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				padding: 1em;
 				margin: 0.5em 0;
 				background: white;
-				border-left: 4px solid #3b82f6;
+				border-left: 4px solid #ed8122;
 				border-radius: 6px;
 				transition: all 0.3s ease;
 			}
@@ -88,7 +112,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			.cta-section {
 				text-align: center;
-				background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+				background: linear-gradient(135deg, #054353 0%, #054353 100%);
 				color: white;
 				padding: 3em 2em;
 				border-radius: 12px;
@@ -100,8 +124,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			.cta-button {
 				display: inline-block;
-				background: white;
-				color: #1e3a8a;
+				background: #f5bd18;
+				color: #054353;
 				padding: 1em 2.5em;
 				border-radius: 50px;
 				text-decoration: none;
@@ -114,7 +138,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				transform: scale(1.05);
 				box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 			}
+			.contact-section {
+				background: white;
+				padding: 3em 2em;
+				border-radius: 12px;
+				margin: 3em 0;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			}
+			.contact-section h2 {
+				color: #054353;
+				text-align: center;
+				margin-bottom: 1.5em;
+			}
+			.contact-info {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2em;
+				justify-content: center;
+				align-items: center;
+			}
+			.contact-item {
+				display: flex;
+				align-items: center;
+				gap: 0.8em;
+				padding: 1em 1.5em;
+				background: #f8fafc;
+				border-radius: 8px;
+				transition: all 0.3s ease;
+			}
+			.contact-item:hover {
+				background: rgba(245, 189, 24, 0.1);
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+			.contact-item svg {
+				width: 24px;
+				height: 24px;
+				fill: #ed8122;
+				flex-shrink: 0;
+			}
+			.contact-item a {
+				color: #054353;
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 1.1em;
+			}
+			.contact-item a:hover {
+				color: #ed8122;
+			}
 			@media (max-width: 720px) {
+				.hero-content {
+					gap: 2em;
+				}
+				.hero-image img {
+					width: 200px;
+					height: 200px;
+				}
 				.hero h1 {
 					font-size: 2.5em;
 				}
@@ -128,9 +207,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="hero">
-				<h1>Alexandre Grondin</h1>
-				<p class="subtitle">Votre voix au conseil municipal</p>
-				<div class="district">District 4 - Granby</div>
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>Alexandre Grondin</h1>
+						<p class="subtitle">Votre voix au conseil municipal</p>
+						<div class="district">District 4 - Granby</div>
+					</div>
+					<div class="hero-image">
+						<img src="/Grondin_D04.png" alt="Alexandre Grondin" />
+					</div>
+				</div>
 			</div>
 
 			<section>
@@ -158,18 +244,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div class="priorities">
 				<h2>Mes priorités pour le District 4</h2>
 				<ul>
-					<li><strong>Améliorer nos infrastructures</strong> - Routes, trottoirs et espaces publics sécuritaires et bien entretenus</li>
-					<li><strong>Soutenir les familles</strong> - Plus de parcs, d'espaces verts et d'activités pour nos jeunes</li>
-					<li><strong>Développement économique local</strong> - Encourager les commerces de proximité et créer des opportunités</li>
+					<li><strong>Améliorer nos infrastructures</strong> - Routes, trottoirs et espaces publics sécuritaires, bien entretenus et accessibles à tous</li>
+					<li><strong>Soutenir les familles</strong> - Plus de parcs, d'espaces verts et d'activités pour nos jeunes et nos aînés</li>
+					<li><strong>Développement économique local</strong> - Encourager les commerces de proximité et soutenir l'entrepreneuriat pour créer des opportunités ici, chez nous</li>
 					<li><strong>Environnement et mobilité durable</strong> - Promouvoir le transport actif et protéger nos espaces naturels</li>
 					<li><strong>Sécurité publique</strong> - Assurer un quartier sûr où il fait bon vivre pour tous</li>
+          <li><strong>Lutte contre l'itinérance</strong> - Collaborer avec les organismes locaux pour offrir des solutions humaines, durables et adaptées aux personnes en situation d'itinérance</li>
 				</ul>
 			</div>
 
+			<section class="contact-section">
+				<h2>Contactez-moi</h2>
+				<p style="text-align: center; margin-bottom: 2em; color: #4b5563;">
+					Des questions? Des préoccupations? Je suis à votre écoute.
+				</p>
+				<div class="contact-info">
+					<div class="contact-item">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+						</svg>
+						<a href="mailto:info@alexandregrondin.ca">info@alexandregrondin.ca</a>
+					</div>
+					<div class="contact-item">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+						</svg>
+						<a href="tel:+14505000182">450 500-0182</a>
+					</div>
+				</div>
+			</section>
+
 			<section class="cta-section">
 				<h2>Faisons la différence ensemble</h2>
-				<p>Votre voix compte. Votre quartier compte. Le 3 novembre, votez pour un changement positif dans le District 4.</p>
-				<a href="/blog" class="cta-button">Découvrez mes propositions</a>
+				<p>Votre voix compte. Votre quartier compte. Le 2 novembre, votez pour un changement positif dans le District 4.</p>
+//				<a href="/blog" class="cta-button">Découvrez mes propositions</a>
 			</section>
 		</main>
 		<Footer />
